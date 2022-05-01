@@ -1,6 +1,5 @@
 package andrefigas.com.github.instagram
 
-import andrefigas.com.github.instagram.R
 import androidx.annotation.DrawableRes
 
 data class FeedEntry(

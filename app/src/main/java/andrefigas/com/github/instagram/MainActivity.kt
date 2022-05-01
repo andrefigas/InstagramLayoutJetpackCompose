@@ -38,14 +38,19 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            InstagramTheme {
-                Scaffold(bottomBar = { BottomBar() }, drawerContent = { Text(text = "Drawer") }) {
-                    Column {
-                        AppBar()
-                        MainContent()
-                    }
-                }
+            AppContent()
+        }
+    }
+}
 
+@Preview(showBackground = true)
+@Composable
+fun AppContent() {
+    InstagramTheme {
+        Scaffold(bottomBar = { BottomBar() }, drawerContent = { Text(text = "Drawer") }) {
+            Column {
+                AppBar()
+                MainContent()
             }
         }
     }
@@ -128,7 +133,6 @@ fun MainContent() {
 
 }
 
-@Preview(showBackground = true)
 @Composable
 fun Stories() {
     val stories = Avatar.stories
